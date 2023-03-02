@@ -1,0 +1,77 @@
+@import './Assets/styles/color';
+
+/**
+ * ============================================================================
+ * Imports Google Fonts
+ * - Import séparé volontairement au cas où si je souhaite changer une des deux
+ * - polices de caractères.
+ * ============================================================================
+ */
+
+/* Utilisations pour les titres */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+/* Utilisation pour les textes */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,700;1,100;1,300;1,700&display=swap');
+
+/**
+ * ============================================================================ * RESET CSS
+ * ============================================================================
+ */
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/**
+ * ============================================================================ * CSS Général
+ * ============================================================================
+ */
+body {
+  margin: 0;
+  font-family: $texte;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-areas:
+    "Header"
+    "Content"
+    "Footer"
+;
+
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $titre;
+}
+
+em {
+  color: $red;
+}
+
+strong {
+  color: $red;
+  font-weight: 700;
+}
+
+.container__clippath {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  min-width: 100%;
+  height: 100px;
+  z-index: 5;
+  background-color: $dark;
+  clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+}

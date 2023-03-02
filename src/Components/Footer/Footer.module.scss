@@ -1,0 +1,131 @@
+@import '../../Assets/styles/color';
+
+footer {
+  grid-area: footer;
+  height: 550px;
+  padding-top: 70px;
+  background-color: $dark;
+  color: $white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .container__clippath {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    min-width: 100%;
+    height: 100px;
+    z-index: 5;
+    background-color: $dark;
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  .container__top {
+    grid-area: container_top;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr;
+    grid-area:
+            "left middle right"
+  ;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .left {
+    grid-area: left;
+    min-width: calc(20% - 20px);
+    padding-left: 100px;
+  }
+  .middle {
+    width: 50%;
+    grid-area: middle;
+    display: flex;
+    flex-direction: column;
+    .content {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      figure {
+        margin-bottom: 40px;
+        width: 15%;
+        img {
+          cursor: pointer;
+          filter: sepia(100%);
+          transition: filter 0.5s ease-in-out;
+          &:hover {
+            filter: sepia(0%);
+          }
+        }
+      }
+      p {
+        align-self: flex-start;
+        width: 50%;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        text-align: left;
+      }
+    }
+  }
+  .right {
+    grid-area: right;
+    min-width: calc(30% - 20px);
+    padding-right: 125px;
+  }
+
+  .container__bottom {
+    grid-area: container_bottom;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #151515;
+    border-top: 2px solid $secondary;
+
+    span {
+      a {
+        margin: 0 15px;
+        img {
+          filter: sepia(100%);
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.left,
+.right {
+  ul {
+    list-style-type: none;
+    margin-bottom: 0px;
+    li {
+      text-align: left;
+      letter-spacing: 2px;
+      font-size: 1.2em;
+      &::before {
+        content: "— ";
+        padding-right: 10px;
+      }
+      a:not(.link) {
+        text-decoration: none;
+        color: $white;
+        padding: 2px 0 2px 25px;
+        &.router-link-exact-active {
+          color: $secondary;
+        }
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
