@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 // Components
-import { ThemeSelector } from '../../Utils';
+import ThemeSelector  from '../../ThemeSelector';
 
 // SCSS
 import "./Navbar.scss"
@@ -13,9 +13,9 @@ const StyledNav = styled.nav`
   z-index: 10;
   position: sticky;
   top: 0;
-  background-color: #151515
+  background-color: #151515;
   height: 65px;
-  border-bottom: 1px solid ${(props:any)=> props.theme.secondary};
+  border-bottom: 1px solid ${(props)=> props.theme.secondary};
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -23,7 +23,7 @@ const StyledNav = styled.nav`
 const StyledSpan = styled.span`
   font-size: 1.5em;
   font-weight: 700;
-  color: ${(props:any) => props.theme.seconadry };
+  color: ${(props) => props.theme.seconadry };
 `;
 const StyledUl = styled.ul`
   display: flex;
@@ -35,7 +35,7 @@ const StyledLi = styled.li`
 `;
 const StyledNavLink = styled(NavLink)`
   line-height: 65px;
-  color: ${(props:any) => props.theme.primary };
+  color: ${(props) => props.theme.primary };
   text-decoration: none;
   display: inline-block;
   padding: 0 15px;
@@ -43,8 +43,8 @@ const StyledNavLink = styled(NavLink)`
   transition: all .7s ease-in-out;
   font-size: calc(10px + 1.2vmin);
   &:hover {
-    background-color: ${(props:any) => props.theme.backgroundColor };
-    color: ${(props:any) => props.theme.secondary };
+    background-color: ${(props) => props.theme.backgroundColor };
+    color: ${(props) => props.theme.secondary };
   }
 `;
 

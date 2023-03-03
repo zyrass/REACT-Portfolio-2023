@@ -67,4 +67,3 @@ function ProjectsList() {
 }
 
 export default ProjectsList;
-Footer

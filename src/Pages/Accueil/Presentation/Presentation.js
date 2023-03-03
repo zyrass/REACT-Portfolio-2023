@@ -6,7 +6,7 @@ import styled from "styled-components";
 // Styled Components
 const StyledH1      = styled.h1`
   font-size: calc(10px + 7vmin);
-  color: ${(props:any) => props.theme.secondary};
+  color: ${(props) => props.theme.secondary};
   padding-bottom: 20px;
   filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
 `;
@@ -15,11 +15,11 @@ const StyledP       = styled.p`
   font-size: calc(10px + 1.3vmin);
   letter-spacing: 1.6px;
   max-width: 100%;
-  color: ${(props:any) => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   filter: drop-shadow(1px 1px 3px rgba(0,0,0,1));
 `;
 const StyledEm      = styled.em`
-  color: ${(props:any) => props.theme.secondary};
+  color: ${(props) => props.theme.secondary};
   font-weight: 500;
 `;
 const StyledA     = styled.a`
@@ -30,8 +30,8 @@ const StyledA     = styled.a`
   font-size: calc(10px + 1.6vmin);
   text-transform: uppercase;
   text-decoration: none;
-  color:  ${(props:any)=> props.theme.textColor};
-  background-color: ${(props:any)=> props.theme.primary};
+  color:  ${(props)=> props.theme.textColor};
+  background-color: ${(props)=> props.theme.primary};
   outline: none;
   border: 2px solid #252525;
   border-radius: 4px;
@@ -39,7 +39,7 @@ const StyledA     = styled.a`
   transition: all 0.5s ease-in-out;
   &:hover {
       color: #252525;
-      background-color:  ${(props:any)=> props.theme.secondary};
+      background-color:  ${(props)=> props.theme.secondary};
       border: 1px solid $white;
   }
 `;
@@ -51,10 +51,10 @@ const StyledContainerRightFigure = styled.figure`
   background-color: #252525;
   transition: background-color 0.5s ease-in-out;
   box-shadow: 0 0 20px rgba(0,0,0, 0.5);
-  border: 1px solid ${(props:any)=>props.theme.secondary};
+  border: 1px solid ${(props)=>props.theme.secondary};
   cursor: pointer;
   &:hover {
-    background-color: ${(props:any)=>props.theme.backgroundColor};
+    background-color: ${(props)=>props.theme.backgroundColor};
     box-shadow: inset 0 0 40px 25px rgba(0,0,0, 0.9);
     border: 1px solid rgba(255,255,255, 0.1)!important;            
   }
@@ -77,23 +77,23 @@ const StyledContainerInfoDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-top: 1px solid ${(props:any) => props.theme.secondary };
-  border-bottom: 1px solid ${(props:any) => props.theme.secondary };
+  border-top: 1px solid ${(props) => props.theme.secondary };
+  border-bottom: 1px solid ${(props) => props.theme.secondary };
 `;
 const StyledContainerInfoDivSpan = styled.span`
   font-weight: 500;
-  color: ${(props:any) => props.theme.secondary };
+  color: ${(props) => props.theme.secondary };
   font-size: calc(10px + 1.6vmin);
 `;
 const StyledContainerInfoDivAddress = styled.address`
   font-weight: 500;
-  color: ${(props:any) => props.theme.primary };
+  color: ${(props) => props.theme.primary };
   font-size: calc(10px + 1.6vmin);
 `;
 
-function Tilt(props: any) {
+function Tilt(props) {
     const { options, ...rest } = props;
-    const tilt = useRef(null as any)
+    const tilt = useRef(null)
 
     useEffect( () => {
         VanillaTilt.init(tilt.current, options);

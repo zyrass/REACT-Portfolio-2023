@@ -7,7 +7,7 @@ import ProjectsList from "./ProjectsList/ProjectsList";
 
 // Styled Components
 const StyledH1 = styled.h1`
-  color: ${(props: any) => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   font-size: 4rem;
 `;
 

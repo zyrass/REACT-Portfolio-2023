@@ -6,7 +6,7 @@ import "./Story.scss";
 
 function Story() {
     // Etats
-    const [qualities, setQualities] = useState<string[]>([]);
+    const [qualities, setQualities] = useState([]);
     const [asideStatus, setAsideStatus] = useState(true);
 
     // Effets
@@ -15,7 +15,7 @@ function Story() {
     }, [qualities]);
 
     // Méthodes
-    const addQuality = (textQuality: string): void => {
+    const addQuality = (textQuality) => {
         setQualities(() => {
             const checkStringExist = qualities.find((text) => text === textQuality);
             if (!checkStringExist) {
@@ -26,7 +26,7 @@ function Story() {
         });
     };
 
-    const clearQualities = ($e: any) => {
+    const clearQualities = ($e) => {
         $e.preventDefault();
         setQualities([]);
     };

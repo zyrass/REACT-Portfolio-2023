@@ -1,6 +1,6 @@
 // Dependancies
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -8,7 +8,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from './App';
 
 // Module CSS
-import './index.module.scss';
+import './index.scss';
 
 // Redux
 import { createStore } from 'redux';

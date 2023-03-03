@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
 // Load applyTheme
-import { applyTheme } from "../../Store/Actions/themeActions";
+import { applyTheme } from "./Store/Actions/themeAction";
 
 // Load all themes
 import {
@@ -14,19 +14,19 @@ import {
     purpleTheme,
     // pinkTheme,
     redTheme,
-} from "../../Themes/themes";
+} from "./Themes/themes";
 
 const BTN = styled.button`
   width: 40px;
   height: 40px;
-  border: 1px dotted ${(props: any) => props.theme.primary};
+  border: 1px dotted ${(props) => props.theme.primary};
   border-radius: 4px;
   margin: 0 5px;
 `;
 
 function ThemeSelector() {
     const dispatch = useDispatch();
-    const handledChangedTheme = (theme: any) => {
+    const handledChangedTheme = (theme) => {
         dispatch(applyTheme(theme));
     };
 
@@ -42,10 +42,10 @@ function ThemeSelector() {
                 style={{ backgroundColor: "#7f4828" }}
             ></BTN>
 
-            <BTN
+            {/*<BTN
                 onClick={()=> handledChangedTheme(greenTheme)}
                 style={{ backgroundColor: '#2b611c' }}
-            ></BTN>
+            ></BTN>*/}
 
             <BTN
                 onClick={() => handledChangedTheme(blueTheme)}
@@ -57,10 +57,10 @@ function ThemeSelector() {
                 style={{ backgroundColor: "#81329c" }}
             ></BTN>
 
-            <BTN
+            {/*<BTN
                 onClick={()=> handledChangedTheme(pinkTheme)}
                 style={{ backgroundColor: '#ab0057' }}
-            ></BTN>
+            ></BTN>*/}
 
             <BTN
                 onClick={() => handledChangedTheme(redTheme)}

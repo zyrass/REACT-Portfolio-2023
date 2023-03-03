@@ -1,5 +1,5 @@
 // Load all actions
-import * as Actions from "../Actions/themeActions";
+import * as Actions from "../Actions/themeAction";
 
 // Load all themes
 import {
@@ -17,7 +17,7 @@ const initialState = {
 };
 
 // export themeReducer
-export const themeReducer = (state: any = initialState, action: any) => {
+export const themeReducer = (state = initialState, action) => {
     switch (action.type) {
         case Actions.APPLY_THEME: {
             // Old methods (shallow copy)

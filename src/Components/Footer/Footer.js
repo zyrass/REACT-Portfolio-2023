@@ -1,5 +1,5 @@
 // Dependancies
-import BtnGenerateCV from "../../Utils/BtnGenerateCV/BtnGenerate";
+import BtnGenerateCV from "../../Utils/BtnGenerateCV/BtnGenerateCV";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -8,9 +8,9 @@ import "./Footer.scss"
 
 // Styled Components
 const StyledH3 = styled.h3`
-  color: ${(props:any) => props.theme.secondary};
+  color: ${(props) => props.theme.secondary};
   font-size: 2em;
-  border-bottom: 2px solid ${(props:any) => props.theme.secondary};
+  border-bottom: 2px solid ${(props) => props.theme.secondary};
   padding-bottom: 20px;
   max-width: 80%;
   margin: 40px auto;
@@ -18,10 +18,10 @@ const StyledH3 = styled.h3`
   min-width: 80%;
 `;
 const StyledEm = styled.em`
-  color: ${(props:any) => props.theme.secondary};
+  color: ${(props) => props.theme.secondary};
 `;
 const StyledSpanColorHearts = styled.span`
-  color: ${(props:any) => props.theme.secondary};
+  color: ${(props) => props.theme.secondary};
   font-size: calc(10px + 2vmin);
 `;
 

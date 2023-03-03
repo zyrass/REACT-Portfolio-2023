@@ -10,9 +10,9 @@ import ImgLogo from "../../../Components/ImgLogo";
 const StyledFigure = styled.figure`
   width: 500px;
   height: 400px;
-  border: 5px solid ${(props: any) => props.theme.backgroundColor};
+  border: 5px solid ${(props) => props.theme.backgroundColor};
   margin: 20px 0;
-  box-shadow: 0 0 10px ${(props: any) => props.theme.primary};
+  box-shadow: 0 0 10px ${(props) => props.theme.primary};
   overflow: hidden;
   position: relative;
 `;
@@ -23,7 +23,7 @@ const StyledImg = styled.img`
 `;
 const StyledFigCaption = styled.figcaption`
   padding: 10px 20px;
-  background-color: ${(props: any) => props.theme.primary};
+  background-color: ${(props) => props.theme.primary};
   height: 150px;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ const StyledFigCaption = styled.figcaption`
   font-weight: 500;
 `;
 
-function Project(props: any) {
+function Project(props) {
     const { title, cover, describe, link } = props;
     return (
         <StyledFigure>

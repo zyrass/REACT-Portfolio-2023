@@ -1,4 +1,4 @@
-/ Dépendances
+// Dépendances
 import React from "react";
 import styled from "styled-components";
 
@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Presentation from "./Presentation/Presentation";
 import Statistiques from "./Statistiques/Statistiques";
 import Parcours from "./Parcours/Parcours";
+
 // import Techno from "./TechnoUse/TechnoUse";
 import TechnoUse from "./TechnoUse/TechnoUse";
 
@@ -16,7 +17,7 @@ const StyledDivContainerOdd = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: ${(props: any) => props.theme.backgroundColor};
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 const StyledDivContainerEven = styled.div`
   margin-top: 0;
