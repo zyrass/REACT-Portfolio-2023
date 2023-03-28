@@ -1,6 +1,6 @@
 // Dependancies
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import { createRoot } from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -17,7 +17,7 @@ import { themeReducer } from './Store/Reducers/themeReducers';
 
 const store = createStore( themeReducer )
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <Router>
