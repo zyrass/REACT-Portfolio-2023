@@ -1,6 +1,6 @@
 // Dependancies
 import React from "react";
-import { createRoot } from 'react-dom';
+import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -17,16 +17,14 @@ import { themeReducer } from './Store/Reducers/themeReducers';
 
 const store = createStore( themeReducer )
 
-const root = createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-      <Router>
-          <Provider store={ store }>
-              <App />
-          </Provider>
-      </Router>
-  </React.StrictMode>
-);
+const root = ReactDOM.render(<React.StrictMode>
+    <Router>
+        <Provider store={ store }>
+            <App />
+        </Provider>
+    </Router>
+</React.StrictMode>, document.getElementById('root'));
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
